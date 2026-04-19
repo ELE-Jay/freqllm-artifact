@@ -6,3 +6,6 @@ __pycache__/
 *.log
 *.out
 .DS_Store
+checkpoints/*
+!checkpoints/README.md
+!checkpoints/checkpoint_manifest.md

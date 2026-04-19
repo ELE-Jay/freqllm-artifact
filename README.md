@@ -1,8 +1,26 @@
 # FreqLLM CCS'26 Artifact
 
-This repository packages the result snapshots, plotting scripts, and table-generation scripts needed to reproduce the core paper artifacts for our FHE-friendly GPT-2 study.
+This repository packages the result snapshots, plotting scripts, table-generation scripts, checkpoint manifests, and wrapper pipelines needed to reproduce the core paper artifacts for our FHE-friendly GPT-2 study at multiple reproducibility tiers.
 
-## What This Artifact Reproduces
+## Reproducibility Tiers
+
+This repository now supports three levels of reproducibility:
+
+1. Snapshot-level artifact reproduction
+   Regenerate the published figures and tables from validated JSON result snapshots.
+2. Checkpoint-level reproducibility
+   Provide trained checkpoints, relink them into the full codebase, rerun evaluation, regenerate JSON outputs, and then redraw the paper figures and tables.
+3. Full training reproducibility
+   Start from the training scripts, produce checkpoints, rerun evaluation, and regenerate the paper artifacts.
+
+See:
+
+- `docs/REPRODUCIBILITY_TIERS.md`
+- `checkpoints/README.md`
+- `scripts/run_checkpoint_repro.sh`
+- `scripts/run_full_training_pipeline.sh`
+
+## Snapshot-Level Artifact Reproduction
 
 Running the reproduction pipeline regenerates:
 
@@ -15,7 +33,7 @@ Running the reproduction pipeline regenerates:
 - `tables/freqgpt_approx_params.tex`
 - `tables/freqgpt_depth_cts_small.tex`
 
-The generated figures and tables are rebuilt from validated result snapshots exported from the formal experiment runs. This keeps artifact reproduction lightweight and deterministic for reviewers.
+The generated figures and tables are rebuilt from validated result snapshots exported from the formal experiment runs. This keeps snapshot-level artifact reproduction lightweight and deterministic for reviewers.
 
 ## Quick Start
 
@@ -31,6 +49,7 @@ All outputs will be written to `figures/` and `tables/`.
 ## Directory Layout
 
 - `results/`: validated experiment snapshots in JSON form
+- `checkpoints/`: checkpoint manifest and placement instructions
 - `scripts/`: figure and table reproduction scripts
 - `src/`: public reference implementation snippets with sanitized `FreqMixer` terminology
 - `docs/`: Open Science URL template and artifact notes
@@ -41,7 +60,8 @@ All outputs will be written to `figures/` and `tables/`.
 
 - The public artifact uses the name `FreqMixer` consistently for our frequency-domain mixer operator and related ablations.
 - The scripts here are intentionally self-contained and rely only on `numpy` and `matplotlib`.
-- Heavy OpenFHE/GPU reruns are not required for artifact evaluation; the goal of this package is deterministic reproduction of the paper figures and tables from validated result snapshots.
+- Heavy OpenFHE/GPU reruns are not required for the snapshot-level artifact path.
+- Checkpoint-level and full-training reproducibility require the full OpenFHE/GPU codebase, datasets, and large checkpoint files described in `docs/REPRODUCIBILITY_TIERS.md`.
 
 ## Publishing
 
