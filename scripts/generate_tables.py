@@ -168,8 +168,9 @@ def generate_operator_profile_small() -> None:
         "|---|---|" + "---:|" * len(headers),
     ]
     for method, statistic, values in OPERATOR_PROFILE_SMALL:
+        md_statistic = statistic.replace("\\#", "#")
         tex_lines.append(f"{method} & {statistic} & " + " & ".join(str(v) for v in values) + r" \\")
-        md_lines.append(f"| {method} | {statistic.replace('\\\\#', '#')} | " + " | ".join(str(v) for v in values) + " |")
+        md_lines.append(f"| {method} | {md_statistic} | " + " | ".join(str(v) for v in values) + " |")
         if statistic == "\\# of cts" and method != "FreqGPT":
             tex_lines.append(r"\midrule")
     tex_lines.extend([r"\bottomrule", r"\end{tabular}%", r"}", r"\end{table}"])
