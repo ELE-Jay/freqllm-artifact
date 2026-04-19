@@ -10,3 +10,4 @@ checkpoints/*
 !checkpoints/README.md
 !checkpoints/checkpoint_manifest.md
 !checkpoints/checkpoint_urls.template.json
+!checkpoints/checkpoint_urls.json
