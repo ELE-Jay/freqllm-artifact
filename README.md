@@ -16,6 +16,7 @@ This repository now supports three levels of reproducibility:
 See:
 
 - `docs/REPRODUCIBILITY_TIERS.md`
+- `docs/CHECKPOINT_DISTRIBUTION.md`
 - `checkpoints/README.md`
 - `scripts/run_checkpoint_repro.sh`
 - `scripts/run_full_training_pipeline.sh`
@@ -62,6 +63,7 @@ All outputs will be written to `figures/` and `tables/`.
 - The scripts here are intentionally self-contained and rely only on `numpy` and `matplotlib`.
 - Heavy OpenFHE/GPU reruns are not required for the snapshot-level artifact path.
 - Checkpoint-level and full-training reproducibility require the full OpenFHE/GPU codebase, datasets, and large checkpoint files described in `docs/REPRODUCIBILITY_TIERS.md`.
+- The repository includes `scripts/fetch_checkpoints.py` and `checkpoints/checkpoint_urls.template.json` to support reproducible checkpoint distribution once the final download URLs are filled in.
 
 ## Publishing
 
