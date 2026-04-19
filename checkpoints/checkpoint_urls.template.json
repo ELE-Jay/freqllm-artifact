@@ -12,7 +12,7 @@
     "host": "github-release"
   },
   "gpt2_baseline_kd_large.pth": {
-    "url": "https://huggingface.co/<org-or-user>/freqllm-checkpoints/resolve/main/gpt2_baseline_kd_large.pth",
+    "url": "https://huggingface.co/ELE-Jay/freqllm-checkpoints/resolve/main/gpt2_baseline_kd_large.pth",
     "sha256": "",
     "size_bytes": 0,
     "host": "external"
@@ -30,7 +30,7 @@
     "host": "github-release"
   },
   "freqgpt_polynorm_kd_large_calibrated.pth": {
-    "url": "https://huggingface.co/<org-or-user>/freqllm-checkpoints/resolve/main/freqgpt_polynorm_kd_large_calibrated.pth",
+    "url": "https://huggingface.co/ELE-Jay/freqllm-checkpoints/resolve/main/freqgpt_polynorm_kd_large_calibrated.pth",
     "sha256": "",
     "size_bytes": 0,
     "host": "external"
@@ -48,7 +48,7 @@
     "host": "github-release"
   },
   "polytransformer_paper_large.pth": {
-    "url": "https://huggingface.co/<org-or-user>/freqllm-checkpoints/resolve/main/polytransformer_paper_large.pth",
+    "url": "https://huggingface.co/ELE-Jay/freqllm-checkpoints/resolve/main/polytransformer_paper_large.pth",
     "sha256": "",
     "size_bytes": 0,
     "host": "external"
