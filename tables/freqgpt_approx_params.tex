@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\caption{ICML'25-style approximation parameters adapted to our setting. We explicitly separate the approximation recipe of each secure baseline so that the reader can distinguish which parameters belong to EncryptedLLM, PolyTransformer, and FreqGPT. We omit plaintext GPT-2 because these parameters are specific to encrypted approximation circuits.}
+\label{tab:freqgpt-approx-params}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{l l p{7.2cm}}
+\toprule
+Scale & Method & Approximation / architectural parameters \\
+\midrule
+Small & EncryptedLLM & LN Newton = 16, exp $r$ = 7, Goldschmidt = 14 \\
+Small & PolyTransformer & InvSqrt deg. = 7, Sigma / GeLU deg. = 7 / 7 \\
+Small & FreqGPT & PolyNorm deg. = 2, FreqMixer order = 2, FFT-Linear = yes, Softmax / Division = removed \\
+\midrule
+Medium & EncryptedLLM & LN Newton = 18, exp $r$ = 7, Goldschmidt = 18 \\
+Medium & PolyTransformer & InvSqrt deg. = 7, Sigma / GeLU deg. = 7 / 7 \\
+Medium & FreqGPT & PolyNorm deg. = 2, FreqMixer order = 2, FFT-Linear = yes, Softmax / Division = removed \\
+\midrule
+Large & EncryptedLLM & LN Newton = 18, exp $r$ = 7, Goldschmidt = 22 \\
+Large & PolyTransformer & InvSqrt deg. = 7, Sigma / GeLU deg. = 7 / 7 \\
+Large & FreqGPT & PolyNorm deg. = 2, FreqMixer order = 2, FFT-Linear = yes, Softmax / Division = removed \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

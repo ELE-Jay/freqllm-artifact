@@ -1,0 +1,178 @@
+{
+  "fhe_task_bucket": {
+    "small": {
+      "sst2": {
+        "seq_len": 32,
+        "encryptedllm": 970.4987,
+        "polytransformer": 752.5659,
+        "freqgpt": 367.2332,
+        "speedup": 2.64
+      },
+      "wic": {
+        "seq_len": 32,
+        "encryptedllm": 970.4987,
+        "polytransformer": 752.5659,
+        "freqgpt": 367.2332,
+        "speedup": 2.64
+      },
+      "arc_easy": {
+        "seq_len": 64,
+        "encryptedllm": 1839.4623,
+        "polytransformer": 1403.5966,
+        "freqgpt": 776.8454,
+        "speedup": 2.37
+      },
+      "social_iqa": {
+        "seq_len": 64,
+        "encryptedllm": 1839.4623,
+        "polytransformer": 1403.5966,
+        "freqgpt": 776.8454,
+        "speedup": 2.37
+      },
+      "mnli": {
+        "seq_len": 64,
+        "encryptedllm": 1839.4623,
+        "polytransformer": 1403.5966,
+        "freqgpt": 776.8454,
+        "speedup": 2.37
+      },
+      "piqa": {
+        "seq_len": 128,
+        "encryptedllm": 3165.674,
+        "polytransformer": 2629.0007,
+        "freqgpt": 1228.8365,
+        "speedup": 2.58
+      },
+      "hellaswag": {
+        "seq_len": 128,
+        "encryptedllm": 3165.674,
+        "polytransformer": 2629.0007,
+        "freqgpt": 1228.8365,
+        "speedup": 2.58
+      },
+      "anli_r1": {
+        "seq_len": 128,
+        "encryptedllm": 3165.674,
+        "polytransformer": 2629.0007,
+        "freqgpt": 1228.8365,
+        "speedup": 2.58
+      }
+    },
+    "medium": {
+      "sst2": {
+        "seq_len": 32,
+        "encryptedllm": 1743.2413,
+        "polytransformer": 1340.6529,
+        "freqgpt": 647.8726,
+        "speedup": 2.69
+      },
+      "wic": {
+        "seq_len": 32,
+        "encryptedllm": 1743.2413,
+        "polytransformer": 1340.6529,
+        "freqgpt": 647.8726,
+        "speedup": 2.69
+      },
+      "arc_easy": {
+        "seq_len": 64,
+        "encryptedllm": 3307.0267,
+        "polytransformer": 2501.8498,
+        "freqgpt": 1370.0041,
+        "speedup": 2.41
+      },
+      "social_iqa": {
+        "seq_len": 64,
+        "encryptedllm": 3307.0267,
+        "polytransformer": 2501.8498,
+        "freqgpt": 1370.0041,
+        "speedup": 2.41
+      },
+      "mnli": {
+        "seq_len": 64,
+        "encryptedllm": 3307.0267,
+        "polytransformer": 2501.8498,
+        "freqgpt": 1370.0041,
+        "speedup": 2.41
+      },
+      "piqa": {
+        "seq_len": 128,
+        "encryptedllm": 7540.8613,
+        "polytransformer": 6184.4218,
+        "freqgpt": 2888.5259,
+        "speedup": 2.61
+      },
+      "hellaswag": {
+        "seq_len": 128,
+        "encryptedllm": 7540.8613,
+        "polytransformer": 6184.4218,
+        "freqgpt": 2888.5259,
+        "speedup": 2.61
+      },
+      "anli_r1": {
+        "seq_len": 128,
+        "encryptedllm": 7540.8613,
+        "polytransformer": 6184.4218,
+        "freqgpt": 2888.5259,
+        "speedup": 2.61
+      }
+    },
+    "large": {
+      "sst2": {
+        "seq_len": 32,
+        "encryptedllm": 5318.8318,
+        "polytransformer": 3823.2707,
+        "freqgpt": 2274.614,
+        "speedup": 2.34
+      },
+      "wic": {
+        "seq_len": 32,
+        "encryptedllm": 5318.8318,
+        "polytransformer": 3823.2707,
+        "freqgpt": 2274.614,
+        "speedup": 2.34
+      },
+      "arc_easy": {
+        "seq_len": 64,
+        "encryptedllm": 8494.7866,
+        "polytransformer": 6409.2864,
+        "freqgpt": 3597.2025,
+        "speedup": 2.36
+      },
+      "social_iqa": {
+        "seq_len": 64,
+        "encryptedllm": 8494.7866,
+        "polytransformer": 6409.2864,
+        "freqgpt": 3597.2025,
+        "speedup": 2.36
+      },
+      "mnli": {
+        "seq_len": 64,
+        "encryptedllm": 8494.7866,
+        "polytransformer": 6409.2864,
+        "freqgpt": 3597.2025,
+        "speedup": 2.36
+      },
+      "piqa": {
+        "seq_len": 128,
+        "encryptedllm": 16317.7293,
+        "polytransformer": 13368.0335,
+        "freqgpt": 6304.1398,
+        "speedup": 2.59
+      },
+      "hellaswag": {
+        "seq_len": 128,
+        "encryptedllm": 16317.7293,
+        "polytransformer": 13368.0335,
+        "freqgpt": 6304.1398,
+        "speedup": 2.59
+      },
+      "anli_r1": {
+        "seq_len": 128,
+        "encryptedllm": 16317.7293,
+        "polytransformer": 13368.0335,
+        "freqgpt": 6304.1398,
+        "speedup": 2.59
+      }
+    }
+  }
+}

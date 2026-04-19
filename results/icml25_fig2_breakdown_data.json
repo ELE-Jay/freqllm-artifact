@@ -1,0 +1,95 @@
+{
+  "small": {
+    "baseline": {
+      "norm": 103.5138650894165,
+      "attention": 82.3357346534729,
+      "dense": 35.33541197776795,
+      "gelu": 2.369970989227295,
+      "bootstrap": 35.65862417221069,
+      "attention_chunks": 6,
+      "hidden_chunks": 3,
+      "total": 259.2136068820953
+    },
+    "polytransformer": {
+      "norm": 54.414034080505374,
+      "attention": 65.98227853775025,
+      "dense": 35.33541197776795,
+      "gelu": 5.7004368782043455,
+      "bootstrap": 53.48793625831604,
+      "attention_chunks": 6,
+      "hidden_chunks": 3,
+      "total": 214.92009773254398
+    },
+    "freqgpt": {
+      "norm": 32.216847610473636,
+      "attention": 39.951163387298585,
+      "dense": 18.05879216194153,
+      "gelu": 2.4049253940582274,
+      "bootstrap": 6.906109571456909,
+      "hidden_chunks": 3,
+      "total": 99.53783812522889
+    }
+  },
+  "medium": {
+    "baseline": {
+      "norm": 138.01848678588868,
+      "attention": 106.76026134490967,
+      "dense": 47.11388263702393,
+      "gelu": 3.1599613189697267,
+      "bootstrap": 47.54483222961426,
+      "attention_chunks": 8,
+      "hidden_chunks": 4,
+      "total": 342.5974243164063
+    },
+    "polytransformer": {
+      "norm": 72.55204544067382,
+      "attention": 84.9556531906128,
+      "dense": 47.11388263702393,
+      "gelu": 7.600582504272461,
+      "bootstrap": 71.31724834442139,
+      "attention_chunks": 8,
+      "hidden_chunks": 4,
+      "total": 283.5394121170044
+    },
+    "freqgpt": {
+      "norm": 42.955796813964845,
+      "attention": 53.26821784973144,
+      "dense": 24.07838954925537,
+      "gelu": 3.2065671920776366,
+      "bootstrap": 9.208146095275879,
+      "hidden_chunks": 4,
+      "total": 132.7171175003052
+    }
+  },
+  "large": {
+    "baseline": {
+      "norm": 176.79785346984863,
+      "attention": 132.0863429069519,
+      "dense": 64.52707123756409,
+      "gelu": 3.949951648712158,
+      "bootstrap": 59.43104028701782,
+      "attention_chunks": 10,
+      "hidden_chunks": 5,
+      "total": 436.7922595500946
+    },
+    "polytransformer": {
+      "norm": 94.96480178833008,
+      "attention": 104.8305827140808,
+      "dense": 64.52707123756409,
+      "gelu": 9.500728130340576,
+      "bootstrap": 89.14656043052673,
+      "attention_chunks": 10,
+      "hidden_chunks": 5,
+      "total": 362.9697443008423
+    },
+    "freqgpt": {
+      "norm": 57.96949100494385,
+      "attention": 69.96610307693481,
+      "dense": 30.097986936569214,
+      "gelu": 4.008208990097046,
+      "bootstrap": 11.510182619094849,
+      "hidden_chunks": 5,
+      "total": 173.55197262763977
+    }
+  }
+}

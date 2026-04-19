@@ -1,0 +1,15 @@
+{
+  "variant": "small",
+  "weights": "/root/FHE/EncryptedLLM/EncryptedLLM-repro-kit/python/freqgpt_ablation_formal_no_kd_small.pth",
+  "tasks": {
+    "sst2": 0.5103211009174312,
+    "wic": 0.5,
+    "piqa": 0.515778019586507,
+    "arc_easy": 0.2609427609427609,
+    "social_iqa": 0.33162743091095187,
+    "mnli": 0.3544574630667346,
+    "hellaswag": 0.2568213503286198,
+    "anli_r1": 0.334
+  },
+  "average": 0.3829935157191257
+}

@@ -1,0 +1,119 @@
+{
+  "variant": "small",
+  "seq_lens": {
+    "64": {
+      "encryptedllm_latency": 1854.1260469436645,
+      "ablations": {
+        "full": {
+          "label": "FreqGPT",
+          "latency": 785.0671245574954,
+          "speedup_vs_encryptedllm": 2.3617420586663163,
+          "delta_vs_full": 0.0,
+          "breakdown": {
+            "norm": 267.58181190490734,
+            "attention": 311.59345664978036,
+            "dense": 129.4289257049561,
+            "gelu": 19.503287887573237,
+            "bootstrap": 56.959642410278306
+          }
+        },
+        "wout_polynorm": {
+          "label": "w/o Calib-PolyNorm",
+          "latency": 965.1287967681886,
+          "speedup_vs_encryptedllm": 1.9211177338738152,
+          "delta_vs_full": 180.06167221069325,
+          "breakdown": {
+            "norm": 447.6434841156006,
+            "attention": 311.59345664978036,
+            "dense": 129.4289257049561,
+            "gelu": 19.503287887573237,
+            "bootstrap": 56.959642410278306
+          }
+        },
+        "wout_fftlinear": {
+          "label": "w/o FFT-Linear",
+          "latency": 950.2525737762454,
+          "speedup_vs_encryptedllm": 1.9511928703076082,
+          "delta_vs_full": 165.18544921875002,
+          "breakdown": {
+            "norm": 267.58181190490734,
+            "attention": 311.59345664978036,
+            "dense": 294.6143749237061,
+            "gelu": 19.503287887573237,
+            "bootstrap": 56.959642410278306
+          }
+        },
+        "wout_freqmixer_fft": {
+          "label": "w/o FreqMixer/FFT",
+          "latency": 1044.7482593536376,
+          "speedup_vs_encryptedllm": 1.7747108265973766,
+          "delta_vs_full": 259.68113479614226,
+          "breakdown": {
+            "norm": 267.58181190490734,
+            "attention": 335.7484703063964,
+            "dense": 129.4289257049561,
+            "gelu": 19.503287887573237,
+            "bootstrap": 292.48576354980463
+          }
+        }
+      }
+    },
+    "128": {
+      "encryptedllm_latency": 3189.54119682312,
+      "ablations": {
+        "full": {
+          "label": "FreqGPT",
+          "latency": 1241.893811988831,
+          "speedup_vs_encryptedllm": 2.5682881789347425,
+          "delta_vs_full": 0.0,
+          "breakdown": {
+            "norm": 401.37271785736095,
+            "attention": 499.5367475509645,
+            "dense": 226.2899511337281,
+            "gelu": 29.254931831359855,
+            "bootstrap": 85.43946361541747
+          }
+        },
+        "wout_polynorm": {
+          "label": "w/o Calib-PolyNorm",
+          "latency": 1511.9863203048708,
+          "speedup_vs_encryptedllm": 2.10950400409707,
+          "delta_vs_full": 270.0925083160398,
+          "breakdown": {
+            "norm": 671.4652261734009,
+            "attention": 499.5367475509645,
+            "dense": 226.2899511337281,
+            "gelu": 29.254931831359855,
+            "bootstrap": 85.43946361541747
+          }
+        },
+        "wout_fftlinear": {
+          "label": "w/o FFT-Linear",
+          "latency": 1457.5254232406621,
+          "speedup_vs_encryptedllm": 2.18832628643382,
+          "delta_vs_full": 215.63161125183115,
+          "breakdown": {
+            "norm": 401.37271785736095,
+            "attention": 499.5367475509645,
+            "dense": 441.9215623855592,
+            "gelu": 29.254931831359855,
+            "bootstrap": 85.43946361541747
+          }
+        },
+        "wout_freqmixer_fft": {
+          "label": "w/o FreqMixer/FFT",
+          "latency": 2127.7328859329227,
+          "speedup_vs_encryptedllm": 1.4990327112534327,
+          "delta_vs_full": 885.8390739440918,
+          "breakdown": {
+            "norm": 401.37271785736095,
+            "attention": 812.7223171234131,
+            "dense": 226.2899511337281,
+            "gelu": 29.254931831359855,
+            "bootstrap": 658.0929679870604
+          }
+        }
+      }
+    }
+  }
+}

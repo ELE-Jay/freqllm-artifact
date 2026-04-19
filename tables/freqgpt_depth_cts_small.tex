@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{ICML'25-style operator profile for GPT-2 Small at token position 128. For each method, the first row reports multiplicative depth and the second row reports the number of working ciphertexts under our current OpenFHE-GPU slot configuration ($n=32768$ slots).}
+\label{tab:freqgpt-depth-cts-small}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{l l c c c c}
+\toprule
+Method & Statistic & Normalization & Attention / Mixer & Dense / MLP & Activation \\
+\midrule
+EncryptedLLM & depth & 13 & 22 & 0 & 17 \\
+EncryptedLLM & \# of cts & 3 & 6 & 12 & 12 \\
+\midrule
+PolyTransformer & depth & 9 & 9 & 0 & 7 \\
+PolyTransformer & \# of cts & 3 & 6 & 12 & 12 \\
+\midrule
+FreqGPT & depth & 3 & 2 & 0 & 3 \\
+FreqGPT & \# of cts & 3 & 3 & 3 & 3 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

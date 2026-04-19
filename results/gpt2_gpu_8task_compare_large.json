@@ -1,0 +1,46 @@
+{
+  "baseline": {
+    "sst2": 0.4943,
+    "wic": 0.5,
+    "piqa": 0.525,
+    "arc_easy": 0.2673,
+    "social_iqa": 0.3362,
+    "mnli": 0.3409,
+    "hellaswag": 0.2612,
+    "anli_r1": 0.329,
+    "average": 0.3817375
+  },
+  "polytransformer": {
+    "sst2": 0.5092,
+    "wic": 0.5,
+    "piqa": 0.5169,
+    "arc_easy": 0.2635,
+    "social_iqa": 0.3311,
+    "mnli": 0.3545,
+    "hellaswag": 0.2598,
+    "anli_r1": 0.334,
+    "average": 0.383625
+  },
+  "encryptedllm": {
+    "sst2": 0.5046,
+    "wic": 0.4859,
+    "piqa": 0.5131,
+    "arc_easy": 0.2428,
+    "social_iqa": 0.3419,
+    "mnli": 0.3303,
+    "hellaswag": 0.2607,
+    "anli_r1": 0.337,
+    "average": 0.37703749999999997
+  },
+  "freqgpt": {
+    "sst2": 0.5092,
+    "wic": 0.5,
+    "piqa": 0.5147,
+    "arc_easy": 0.2555,
+    "social_iqa": 0.3414,
+    "mnli": 0.3182,
+    "hellaswag": 0.2605,
+    "anli_r1": 0.333,
+    "average": 0.3790625
+  }
+}
