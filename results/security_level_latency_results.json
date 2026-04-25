@@ -1,0 +1,393 @@
+{
+  "metadata": {
+    "experiment": "security_level_latency_sensitivity",
+    "backend": "OpenFHE-GPU primitive-calibrated latency model",
+    "scheme": "CKKS",
+    "secret_key_distribution": "GAUSSIAN",
+    "standard_deviation": 3.2,
+    "multiplicative_depth": 24,
+    "scaling_modulus_size": 50,
+    "first_modulus_size": 60,
+    "base_ring_dim": 65536,
+    "logical_slot_capacity": 32768,
+    "security_configs": {
+      "128": {
+        "ring_dim": 65536
+      },
+      "192": {
+        "ring_dim": 131072
+      },
+      "256": {
+        "ring_dim": 262144
+      }
+    },
+    "primitive_scaling": {
+      "rotate": "N log N",
+      "add": "N",
+      "mul_cc": "N log N",
+      "mul_cp": "N log N",
+      "bootstrap": "N log N",
+      "light_bootstrap": "N log N"
+    },
+    "packing_policy": "fixed logical packing across security levels",
+    "note": "We vary the CKKS security level by conservatively increasing the ring dimension and scaling primitive latency. The logical packing budget is held fixed so higher lambda does not obtain extra packing capacity as a confounder.",
+    "base_primitive_latencies": {
+      "rotate": 0.20730504989624077,
+      "add": 0.008227825164794852,
+      "mul_cc": 0.2531328996022542,
+      "mul_cp": 0.011598730087280228,
+      "bootstrap": 5.912043333053586,
+      "light_bootstrap": 0.0
+    }
+  },
+  "results": {
+    "small": {
+      "32 tok": {
+        "seq_len": 32,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 1243.5958028793339,
+            "polytransformer": 1025.267394828797,
+            "thor": 1252.1383076648694,
+            "freqllm": 643.4710330963139,
+            "freqllm_speedup_vs_thor": 1.9459124704335384,
+            "freqllm_speedup_vs_encryptedllm": 1.9326368071228996
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 2639.839506649972,
+            "polytransformer": 2176.261891674996,
+            "thor": 2642.4392714102232,
+            "freqllm": 1365.7962028980266,
+            "freqllm_speedup_vs_thor": 1.9347244236023942,
+            "freqllm_speedup_vs_encryptedllm": 1.9328209443316693
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 5584.974815082553,
+            "polytransformer": 4603.977987384798,
+            "thor": 5561.203854981415,
+            "freqllm": 2889.30067920685,
+            "freqllm_speedup_vs_thor": 1.9247577432847995,
+            "freqllm_speedup_vs_encryptedllm": 1.9329849798172267
+          }
+        }
+      },
+      "64 tok": {
+        "seq_len": 64,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 2387.9572742462165,
+            "polytransformer": 1951.300458145142,
+            "thor": 2166.6774950332615,
+            "freqllm": 1177.5732341766366,
+            "freqllm_speedup_vs_thor": 1.8399513780968453,
+            "freqllm_speedup_vs_encryptedllm": 2.027863070372761
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 5069.250361394883,
+            "polytransformer": 4142.095131444932,
+            "thor": 4578.7926021747535,
+            "freqllm": 2499.652623796465,
+            "freqllm_speedup_vs_thor": 1.8317715664108947,
+            "freqllm_speedup_vs_encryptedllm": 2.0279819336239293
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 10725.17234859467,
+            "polytransformer": 8763.178693199161,
+            "thor": 9648.460428565968,
+            "freqllm": 5288.317558479313,
+            "freqllm_speedup_vs_thor": 1.8244858259496124,
+            "freqllm_speedup_vs_encryptedllm": 2.028087804862981
+          }
+        }
+      },
+      "128 tok": {
+        "seq_len": 128,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 4412.7358543396,
+            "polytransformer": 3658.472016906739,
+            "thor": 3479.4149516162834,
+            "freqllm": 1732.3665912628187,
+            "freqllm_speedup_vs_thor": 2.0084749781972784,
+            "freqllm_speedup_vs_encryptedllm": 2.5472298280255514
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 9368.27637319565,
+            "polytransformer": 7766.465399408341,
+            "thor": 7354.531520772211,
+            "freqllm": 3677.3790173053767,
+            "freqllm_speedup_vs_thor": 1.999938403455973,
+            "freqllm_speedup_vs_encryptedllm": 2.547541694535559
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 19822.1620754242,
+            "polytransformer": 16431.973530006417,
+            "thor": 15500.46627662371,
+            "freqllm": 7780.049704170232,
+            "freqllm_speedup_vs_thor": 1.992335122012808,
+            "freqllm_speedup_vs_encryptedllm": 2.547819465060641
+          }
+        }
+      }
+    },
+    "medium": {
+      "32 tok": {
+        "seq_len": 32,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 2487.1916057586677,
+            "polytransformer": 2050.534789657594,
+            "thor": 2793.594977634425,
+            "freqllm": 1286.9420661926279,
+            "freqllm_speedup_vs_thor": 2.1707231825121514,
+            "freqllm_speedup_vs_encryptedllm": 1.9326368071228996
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 5279.679013299944,
+            "polytransformer": 4352.523783349992,
+            "thor": 5888.305917210093,
+            "freqllm": 2731.5924057960533,
+            "freqllm_speedup_vs_thor": 2.155631237191881,
+            "freqllm_speedup_vs_encryptedllm": 1.9328209443316693
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 11169.949630165105,
+            "polytransformer": 9207.955974769597,
+            "thor": 12378.843758302668,
+            "freqllm": 5778.6013584137,
+            "freqllm_speedup_vs_thor": 2.142186835622248,
+            "freqllm_speedup_vs_encryptedllm": 1.9329849798172267
+          }
+        }
+      },
+      "64 tok": {
+        "seq_len": 64,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 4775.914548492433,
+            "polytransformer": 3902.600916290284,
+            "thor": 4676.656732254021,
+            "freqllm": 2355.146468353273,
+            "freqllm_speedup_vs_thor": 1.9857179988996423,
+            "freqllm_speedup_vs_encryptedllm": 2.027863070372761
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 10138.500722789766,
+            "polytransformer": 8284.190262889864,
+            "thor": 9871.93587915419,
+            "freqllm": 4999.30524759293,
+            "freqllm_speedup_vs_thor": 1.9746615560046747,
+            "freqllm_speedup_vs_encryptedllm": 2.0279819336239293
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 21450.34469718934,
+            "polytransformer": 17526.357386398322,
+            "thor": 20781.116587600678,
+            "freqllm": 10576.635116958627,
+            "freqllm_speedup_vs_thor": 1.9648136063879273,
+            "freqllm_speedup_vs_encryptedllm": 2.028087804862981
+          }
+        }
+      },
+      "128 tok": {
+        "seq_len": 128,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 11694.242338562013,
+            "polytransformer": 9682.872105407718,
+            "thor": 8923.398993301382,
+            "freqllm": 4512.2464286804225,
+            "freqllm_speedup_vs_thor": 1.97759566866364,
+            "freqllm_speedup_vs_encryptedllm": 2.591667481685374
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 24827.161236381537,
+            "polytransformer": 20555.665306282048,
+            "thor": 18859.51096987722,
+            "freqllm": 9578.600903797156,
+            "freqllm_speedup_vs_thor": 1.9689212609746503,
+            "freqllm_speedup_vs_encryptedllm": 2.591940251580952
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 52531.67559127809,
+            "polytransformer": 43491.172803497335,
+            "thor": 39744.447906303365,
+            "freqllm": 20265.417900466935,
+            "freqllm_speedup_vs_thor": 1.9611955747227703,
+            "freqllm_speedup_vs_encryptedllm": 2.592183188586884
+          }
+        }
+      }
+    },
+    "large": {
+      "32 tok": {
+        "seq_len": 32,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 6470.348089027407,
+            "polytransformer": 5259.656254005435,
+            "thor": 6654.972252845756,
+            "freqllm": 3542.5666574478173,
+            "freqllm_speedup_vs_thor": 1.878573615221744,
+            "freqllm_speedup_vs_encryptedllm": 1.8264576829978014
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 13734.420427393918,
+            "polytransformer": 11164.032866406445,
+            "thor": 14050.930246353133,
+            "freqllm": 7519.845625376706,
+            "freqllm_speedup_vs_thor": 1.8685131246493178,
+            "freqllm_speedup_vs_encryptedllm": 1.8264231889342666
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 29056.289353466047,
+            "polytransformer": 23617.506449604047,
+            "thor": 29583.83197402951,
+            "freqllm": 15909.115871715556,
+            "freqllm_speedup_vs_thor": 1.8595522348684321,
+            "freqllm_speedup_vs_encryptedllm": 1.8263924650347505
+          }
+        }
+      },
+      "64 tok": {
+        "seq_len": 64,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 10829.906089782718,
+            "polytransformer": 8864.950417327886,
+            "thor": 9702.13259819411,
+            "freqllm": 5215.123466491703,
+            "freqllm_speedup_vs_thor": 1.8603840657910424,
+            "freqllm_speedup_vs_encryptedllm": 2.076634649086874
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 22989.928354740146,
+            "polytransformer": 18817.729819965367,
+            "thor": 20493.272404137588,
+            "freqllm": 11070.363348484047,
+            "freqllm_speedup_vs_thor": 1.8511833585790927,
+            "freqllm_speedup_vs_encryptedllm": 2.076709465718516
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 48640.08905982973,
+            "polytransformer": 39811.11761054994,
+            "thor": 43164.559223773904,
+            "freqllm": 23420.959527969375,
+            "freqllm_speedup_vs_thor": 1.8429885066077958,
+            "freqllm_speedup_vs_encryptedllm": 2.076776103120096
+          }
+        }
+      },
+      "128 tok": {
+        "seq_len": 128,
+        "latency_by_security_level": {
+          "128": {
+            "lambda": 128,
+            "ring_dim": 65536,
+            "slot_capacity": 32768,
+            "encryptedllm": 22236.828518486025,
+            "polytransformer": 18465.509331321722,
+            "thor": 16483.87757633398,
+            "freqllm": 8560.237084579474,
+            "freqllm_speedup_vs_thor": 1.9256332988753615,
+            "freqllm_speedup_vs_encryptedllm": 2.5976883932973944
+          },
+          "192": {
+            "lambda": 192,
+            "ring_dim": 131072,
+            "slot_capacity": 32768,
+            "encryptedllm": 47208.49711897375,
+            "polytransformer": 39199.44225003721,
+            "thor": 34837.44670436307,
+            "freqllm": 18171.39879469873,
+            "freqllm_speedup_vs_thor": 1.9171582274957526,
+            "freqllm_speedup_vs_encryptedllm": 2.5979561426358777
+          },
+          "256": {
+            "lambda": 256,
+            "ring_dim": 262144,
+            "slot_capacity": 32768,
+            "encryptedllm": 99886.67440195086,
+            "polytransformer": 82935.73167486193,
+            "thor": 73414.27651211637,
+            "freqllm": 38444.64684047702,
+            "freqllm_speedup_vs_thor": 1.909609855872601,
+            "freqllm_speedup_vs_encryptedllm": 2.5981946151416766
+          }
+        }
+      }
+    }
+  }
+}
